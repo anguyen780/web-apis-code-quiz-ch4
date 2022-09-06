@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Coding Quiz</title>
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="nav-header">
             <a class="highscores" href="">View Highscores</a>
-            <p class="counter"></p>
+            <p class="counter">Time: <span class="time">0</span></p>
         </nav>
     </header>
 
@@ -30,17 +30,15 @@
         </div>
         <button class="btn-start">Start Quiz</button>
     </section>
-
-
-
-
-
-
-
-
-
+        
+    <div id="questions" class="hidden">
+            <h2 id="question-title"></h2>
+            <ul id="choices"></ul>
+        </div>
+    
+    <script src="./assets/questions.js"></script>
     <script src="./assets/script.js"></script>
-    <script src=""></script>
+    
 </body>
 
 </html>
