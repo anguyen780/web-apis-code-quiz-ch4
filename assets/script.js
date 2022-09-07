@@ -14,7 +14,11 @@ var submitBtn = document.getElementById('submit-button');
 var initialsEl = document.getElementById('initials');
 
 
-buttonStart.addEventListener('click', function(){
+buttonStart.addEventListener('click', startQuiz)
+
+// function startTimer()
+
+function startQuiz(){
     startPage.setAttribute('style','display:none');
     questionsList.removeAttribute('class');
     timeCount.textContent = time;
@@ -23,7 +27,7 @@ buttonStart.addEventListener('click', function(){
         timeCount.textContent = time;
     }, 1000);
     questionsArray();
-});
+};
 
 function questionsArray(){
     var curQuestion = questions[questionIndex];
@@ -44,6 +48,7 @@ function questionsArray(){
 };
 
 choicesEl.addEventListener('click',questionButton);
+
 function questionButton (e){
     var buttonClick = e.target;
     feedbackEl.removeAttribute('class')
@@ -75,24 +80,20 @@ function endQuiz(){
     finalScore.textContent = time;
 };
 
+submitBtn.addEventListener('click',submitScore);
+
 function submitScore(){
     var initials = initialsEl.value.trim();
         var userScore = {
             score: time,
             initials: initials,
         };   
-    var highScore = JSON.parse(window.localStorage.getItem('userScore')) || [];
+    var highScore = JSON.parse(localStorage.getItem('highScore')) || [];
     highScore.push(userScore)
-    window.localStorage.setItem('userScore', JSON.stringify(highScore));
-    window.location.href = 'highscoreSheet.html';
+    console.log(highScore)
+    localStorage.setItem('highScore', JSON.stringify(highScore));
+    
     }
 
-submitBtn.addEventListener('click',function(event){
-        event.preventDefault();
-        submitScore();
-        getScore();
-    });
 
-function getScore(){
-    document.getElementById('highscores').innerHTML = highScore.userScore;
-}
+
