@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav class="nav-header">
-            <a class="highscores" href="">View Highscores</a>
+            <a class="highscores" href="highscoreSheet.html">View Highscores</a>
             <p class="counter">Time: <span class="time">0</span></p>
         </nav>
     </header>
@@ -34,9 +34,14 @@
     <div id="questions" class="hidden">
             <h2 id="question-title"></h2>
             <ul id="choices"></ul>
-            <p id="feedback"></p>
-        </div>
-    
+    </div>
+            
+    <div id="end-page" class="hidden">
+        <h2>All done!</h2>
+        <p class="final-score">Your final score is: <span id="score"></span></p>
+        <div class="entInitials">Enter your initials:<input id='initials' type="text"><button id="submit-button">Submit</button></div>
+    </div>
+    <p id="feedback" class="hidden"></p>
     <script src="./assets/questions.js"></script>
     <script src="./assets/script.js"></script>
     

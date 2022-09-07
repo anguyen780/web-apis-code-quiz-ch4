@@ -3,19 +3,38 @@ body {
     /* text-align: center; */
 }
 
+.highscores {
+    font-size: 150%;
+    text-decoration: none;
+    color: #8e65e0;
+}
+
+.highscores:hover {
+    color: #a58adb;
+}
+
+.btn-start:hover {
+    background-color: #a58adb;
+}
+
+.counter {
+    font-size: 150%;
+}
+
 .coding-start {
     line-height: 2.5;
 }
 
-section h1 {
+section h1, div h2 {
     font-size: 250%;
    text-align: center;
 }
 
 .coding-p{
     max-width: 30%;
-    padding-left: 600px;
+    padding-left: 670px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .btn-start {
@@ -23,10 +42,75 @@ section h1 {
     border-radius: 4px;
     color: white;
     position: relative;
-    margin-left: 820px;
+    margin-left: 880px;
+    font-size: 150%;
 }
 
 .nav-header {
     display: flex;
     justify-content: space-between;
+}
+
+#question-title {
+    font-size: 250%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8e65e0;
+    border-radius: 4px;
+    color: white;
+    font-size: 120%;
+    margin: 20px 10px;
+    margin-left: 530px;
+}
+
+.choice:hover {
+    background-color: #a58adb;
+}
+
+#feedback {
+    font-size: 150%;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#end-page {
+    text-align: center;
+}
+
+#end-page h2 {
+    font-size: 200%;
+}
+
+.final-score, .entInitials {
+    font-size: 150%;
+}
+
+.btn-back {
+    background-color: #8e65e0;
+    border-radius: 4px;
+    color: white;
+    font-size: 120%;
+    margin-left: 820px;
+}
+
+.btn-clear {
+    background-color: #8e65e0;
+    border-radius: 4px;
+    color: white;
+    font-size: 120%;
+    margin-left: 10px;
+}
+
+.hs-sheet-h2 {
+    margin-top: 100px;
 }
