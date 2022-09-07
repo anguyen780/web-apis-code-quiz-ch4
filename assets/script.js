@@ -5,6 +5,10 @@ var time = 75;
 var questionsList = document.querySelector('#questions');
 questionsList.setAttribute('style','display:none');
 var questionIndex = 0;
+var feedbackEl = document.querySelector('#feedback');
+feedbackEl.setAttribute('style','display:none');
+var choicesEl = document.querySelector('#choices');
+
 
 buttonStart.addEventListener('click', function(){
     startPage.setAttribute('style','display:none');
@@ -21,7 +25,7 @@ function questionsArray(){
     var curQuestion = questions[questionIndex];
     var titleQuestion = document.querySelector('#question-title');
     titleQuestion.textContent = curQuestion.title;
-    var choicesEl = document.querySelector('#choices');
+    // var choicesEl = document.querySelector('#choices');
     choicesEl.innerHTML='';
 
     for (var i = 0; i < curQuestion.choices.length; i++){
@@ -32,5 +36,23 @@ function questionsArray(){
         choiceBtn.textContent = i + 1 + '. ' + option;
         choicesEl.append(choiceBtn);
     }
-};
+}
+choicesEl.addEventListener('click',questionButton)
+function questionButton (e){
+    var buttonClick = e.target;
+    
+    if (buttonClick.value !== questions[questionIndex].answer){
+        time -= 15;
+        timeCount.textContent = time;
+        feedbackEl.textContent = 'That is incorrect!';
+    } else {
+        feedbackEl.textContent = 'That is correct!';
+    };
+    
+    setTimeout(function(){
+        feedbackEl.removeAttribute('style');
+    },1000);
+
+    questionIndex++;
+}
 
