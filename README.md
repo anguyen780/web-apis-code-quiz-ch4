@@ -1,11 +1,11 @@
 # web-apis-code-quiz-ch4
 
-[Live Link]()
+[Live Link](https://anguyen780.github.io/web-apis-code-quiz-ch4/)
 
 ## Description
+With this weeks challenge we were in charge of curating a coding quiz that is reactive to correct/incorrect answers, button clicks, and logging highscores. Using web API concepts that we learned in class such as traversing the DOM, creating event listeners, storing data in local storage, etc, I was able to create this coding quiz. 
 
-In the CSS code given to us, there were lots of code that was repeated. To keep the code clean we were in charge of refactoring the code in order to create ease of legibility and functionality. On many CSS selectors I consolidated them into just one class because a lot of them had repeating properties. I also made some of the "div" tags into semantic html elements such as header, section and aside. In doing this challenge I found that there were numerous ways in which we could have refactored this code and there is no 100% right answer. 
 
-## Usage
+## Demo
 
-![alt text](assets/images/code-refactor-ch-1_index.html.png)
+![Demo Gif](./assets/gifs/Coding%20Quiz.gif)
