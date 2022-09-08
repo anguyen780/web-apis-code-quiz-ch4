@@ -16,7 +16,7 @@ var initialsEl = document.getElementById('initials');
 
 buttonStart.addEventListener('click', startQuiz)
 
-// function startTimer()
+
 
 function startQuiz(){
     startPage.setAttribute('style','display:none');
@@ -33,7 +33,6 @@ function questionsArray(){
     var curQuestion = questions[questionIndex];
     var titleQuestion = document.querySelector('#question-title');
     titleQuestion.textContent = curQuestion.title;
-    // var choicesEl = document.querySelector('#choices');
     choicesEl.innerHTML='';
    
     for (var i = 0; i < curQuestion.choices.length; i++){

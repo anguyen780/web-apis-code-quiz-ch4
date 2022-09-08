@@ -1,6 +1,5 @@
 body {
     font-family: 'Roboto', sans-serif;
-    /* text-align: center; */
 }
 
 .highscores {
@@ -31,8 +30,6 @@ section h1, div h2 {
 }
 
 .coding-p{
-    max-width: 30%;
-    padding-left: 670px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -41,8 +38,9 @@ section h1, div h2 {
     background-color: #8e65e0;
     border-radius: 4px;
     color: white;
-    position: relative;
-    margin-left: 880px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
     font-size: 150%;
 }
 
@@ -100,7 +98,7 @@ section h1, div h2 {
     border-radius: 4px;
     color: white;
     font-size: 120%;
-    margin-left: 820px;
+    
 }
 
 .btn-clear {
@@ -108,9 +106,27 @@ section h1, div h2 {
     border-radius: 4px;
     color: white;
     font-size: 120%;
-    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .hs-sheet-h2 {
     margin-top: 100px;
+}
+
+.hs-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submit-button {
+    background-color: #8e65e0;
+    border-radius: 4px;
+    color: white;
+    font-size: 70%;
+}
+
+#end-page h2, #end-page p, #end-page .entInitials{
+    margin-bottom: 20px;
 }
